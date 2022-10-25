@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\SampleController;
+use App\Http\Controllers\ReceiptController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +20,10 @@ use App\Http\Controllers\SampleController;
 //     return $request->user();
 // });
 
-
     # 実行処理
-    Route::get('/execute', [SampleController::class, 'execute']);
+    // Route::get('/execute', [SampleController::class, 'execute']);
+    // Route::get('/execute', [ReceiptController::class, 'execute']);
+
+    Route::get('/store', [ReceiptController::class, 'store']);
+    Route::get('/restore', [ReceiptController::class, 'restore']);
+
